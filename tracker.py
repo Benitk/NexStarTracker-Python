@@ -4,8 +4,8 @@ import nexstarAPI
 
 def main():
 
-    port = "/dev/ttyS0"
-    #port = "/dev/ttyUSB0"
+    #port = "/dev/ttyS0"
+    port = "/dev/ttyUSB0"
 
     # for arg in sys.argv:
     #     if arg.startswith("--port="):
