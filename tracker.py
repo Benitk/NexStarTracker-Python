@@ -81,7 +81,8 @@ def main():
             y = (int(bbox[1]+int(bbox[3]))) / 2
 
             if(x > xCenter * 1.1): # move scope right
-
+                
+                xCenter = x
                 # should be in a function and getting paramters of where to move
                 pos = controller.getPosition()
                 controller.gotoPosition(pos[0] * 1.1, pos[1])
@@ -94,6 +95,7 @@ def main():
             if(x < xCenter  * 1.1): # move scope left
 
                     # should be in a function and getting paramters of where to move
+                xCenter = x
                 pos = controller.getPosition()
                 controller.gotoPosition(pos[0] * 0.9, pos[1])
                 gotoInProgress = True
@@ -103,7 +105,7 @@ def main():
                     gotoInProgress = getGotoInProgress()
 
             if(y < yCenter * 1.1):# move scope up
-
+                yCenter = y
                     # should be in a function and getting paramters of where to move
                 pos = controller.getPosition()
                 controller.gotoPosition(pos[0], pos[1] * 1.1)
@@ -115,7 +117,7 @@ def main():
 
 
             if(y > xCenter * 1.1):# move scope down
-
+                yCenter = y
                     # should be in a function and getting paramters of where to move
                 pos = controller.getPosition()
                 controller.gotoPosition(pos[0], pos[1] * 0.9)
